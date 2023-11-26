@@ -1,21 +1,28 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import ProjectPage from "./Pages/ProjectPage";
-import "./css/util.css";
-import Navbar from "./scenes/Navbar";
-
-function App() {
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./sections/hero/Hero";
+import Intro from "./sections/Intro";
+import Tookit from "./sections/toolkit/Toolkit";
+import Genius from "./sections/Genius";
+import CallToAction from "./sections/CallToAction";
+import Footer from "./sections/Footer";
+import "./assets/css/animation.css";
+const App = () => {
   return (
-    <div className="app relative">
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" id="project-page" element={<ProjectPage />} />
-        </Routes>
-      </Router>
+    <div className="w-full font-Inter">
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <Hero />
+        <Intro />
+        <Tookit />
+        <Genius />
+        <CallToAction />
+      </main>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
