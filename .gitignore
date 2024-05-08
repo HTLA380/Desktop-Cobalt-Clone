@@ -8,6 +8,7 @@
 
 # testing
 /coverage
+/pnpm-lock.yaml
 
 # next.js
 /.next/
