@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface GradientTextInterface {
-  children: string;
+  children: React.ReactNode;
   Wrapper?: React.ElementType;
   className?: string;
 }
