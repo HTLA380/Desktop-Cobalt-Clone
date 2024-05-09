@@ -1,17 +1,26 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import StarFieldAnimation from './StarFieldAnimation';
 
 const DashBoardImage = () => {
   const dashboardRef = useRef<HTMLDivElement>(null);
   const [isAnimationActive, setIsAnimationActive] = useState(false);
 
-  window.addEventListener('scroll', () => {
-    if (!dashboardRef.current) return;
-    if (dashboardRef.current.offsetHeight - window.scrollY > dashboardRef.current.offsetHeight - 80)
-      setIsAnimationActive(true);
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!dashboardRef.current) return;
+      if (dashboardRef.current.offsetHeight - window.scrollY > dashboardRef.current.offsetHeight - 80) {
+        setIsAnimationActive(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className='relative'>
