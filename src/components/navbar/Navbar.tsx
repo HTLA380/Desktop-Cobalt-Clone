@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
   return (
-    <div className='mx-4'>
+    <header className='mx-4'>
       <nav className='absolute inset-x-0 left-0 z-20 w-full'>
         <div className='flex items-center justify-center max-w-screen-xl px-4 py-5 mx-auto'>
           <div className='w-full'>
@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

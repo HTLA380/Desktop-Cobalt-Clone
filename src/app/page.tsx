@@ -1,3 +1,4 @@
+import Footer from '@/components/footer/Footer';
 import CallToActionSection from '@/containers/call-to-action-section';
 import GeniusSection from '@/containers/genius-section';
 import HeroSection from '@/containers/hero-section';
@@ -7,13 +8,14 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <HeroSection />
       <IntroSection />
       <ToolkitSection />
       <GeniusSection />
       <CallToActionSection />
-    </div>
+      <Footer />
+    </main>
   );
 };
 
