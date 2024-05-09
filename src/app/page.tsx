@@ -1,3 +1,4 @@
+import GeniusSection from '@/containers/genius-section';
 import HeroSection from '@/containers/hero-section';
 import IntroSection from '@/containers/intro-section';
 import ToolkitSection from '@/containers/toolkit-section';
@@ -9,6 +10,7 @@ const Home = () => {
       <HeroSection />
       <IntroSection />
       <ToolkitSection />
+      <GeniusSection />
     </div>
   );
 };
