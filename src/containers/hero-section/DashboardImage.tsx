@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import StarFieldAnimation from './StarFieldAnimation';
+import Image from 'next/image';
 
 const DashBoardImage = () => {
   const dashboardRef = useRef<HTMLDivElement>(null);
@@ -40,7 +41,8 @@ const DashBoardImage = () => {
           className={`origin-center dashboard-img ${
             isAnimationActive ? 'dashboard-img-active' : 'dashboard-img-hidden'
           }`}>
-          <img
+          <Image
+            priority={true}
             alt='App screenshot'
             width='4200'
             height='2490'
